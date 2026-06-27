@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         siteName: 'Vengala Gagan — Portfolio',
         images: [
             {
-                url: '/THUMBNAIL.png',
+                url: '/THUMBNAIL.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Vengala Gagan Chandra Tej — Full Stack Developer Portfolio',
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
         title: 'Vengala Gagan Chandra Tej | Full Stack Developer',
         description:
             'Full Stack Developer • React • Next.js • Python • Node.js • AI/ML. Explore my projects and work.',
-        images: ['/THUMBNAIL.png'],
+        images: ['/THUMBNAIL.jpg'],
         creator: '@gagan_vengala',
     },
     robots: {
