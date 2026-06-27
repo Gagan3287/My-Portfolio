@@ -59,17 +59,17 @@ const CERTIFICATIONS = [
         glow: 'rgba(0,120,212,0.25)',
         logo: <Bot size={24} />,
         category: 'AI',
-        year: '2024',
+        year: '2025',
     },
     {
-        name: 'IBM Certification',
-        issuer: 'IBM',
+        name: 'Level Up Cybersecurity with GenAI',
+        issuer: 'IBM SkillsBuild',
         file: '/CERTIFICATIONS/ibm certification.pdf',
         accent: '#1F70C1',
         glow: 'rgba(31,112,193,0.25)',
-        logo: <Lightbulb size={24} />,
-        category: 'Technology',
-        year: '2024',
+        logo: <ShieldAlert size={24} />,
+        category: 'Security',
+        year: '2026',
     },
     {
         name: 'CCNA: Intro to Networks',
@@ -79,7 +79,7 @@ const CERTIFICATIONS = [
         glow: 'rgba(27,160,215,0.25)',
         logo: <Network size={24} />,
         category: 'Networking',
-        year: '2024',
+        year: '2025',
     },
     {
         name: 'CCNA Certificate',
@@ -89,27 +89,27 @@ const CERTIFICATIONS = [
         glow: 'rgba(27,160,215,0.25)',
         logo: <Radio size={24} />,
         category: 'Networking',
-        year: '2024',
+        year: '2025',
     },
     {
-        name: 'AIAC Certification',
+        name: 'AIAC Certifications',
         issuer: 'AIAC',
         file: '/CERTIFICATIONS/AIAC Certifications.pdf',
         accent: '#a855f7',
         glow: 'rgba(168,85,247,0.25)',
         logo: <Trophy size={24} />,
         category: 'AI',
-        year: '2024',
+        year: '2025',
     },
     {
         name: 'Basic Cybersecurity',
-        issuer: 'NCC',
+        issuer: 'NIELIT',
         file: '/CERTIFICATIONS/V.Gagan-Basic Cybersecurity Course (NCC) Certificate.pdf',
         accent: '#ef4444',
         glow: 'rgba(239,68,68,0.25)',
-        logo: <ShieldAlert size={24} />,
+        logo: <Shield size={24} />,
         category: 'Security',
-        year: '2024',
+        year: '2026',
     },
     {
         name: 'Python Basic Certificate',
@@ -122,24 +122,94 @@ const CERTIFICATIONS = [
         year: '2024',
     },
     {
-        name: 'Jetson Nano',
+        name: 'Getting Started with AI on Jetson Nano',
         issuer: 'NVIDIA',
-        file: '/CERTIFICATIONS/jetson Nano nvidia.pdf',
+        file: '/CERTIFICATIONS/NVIDIA CERTIFICATE.pdf',
         accent: '#76b900',
         glow: 'rgba(118,185,0,0.25)',
         logo: <Cpu size={24} />,
         category: 'AI',
-        year: '2024',
+        year: '2026',
     },
     {
-        name: 'Additional Certification',
-        issuer: 'Various',
+        name: 'Prompt Engineering',
+        issuer: 'Infosys Wingspan',
         file: '/CERTIFICATIONS/cert 2.pdf',
         accent: '#6366f1',
         glow: 'rgba(99,102,241,0.25)',
         logo: <FileBadge size={24} />,
+        category: 'AI',
+        year: '2025',
+    },
+    {
+        name: 'CS260: Intro to Cryptography and Network Security',
+        issuer: 'Saylor Academy',
+        file: '/CERTIFICATIONS/2403A52222(B-9)cyber security Certification.pdf',
+        accent: '#ef4444',
+        glow: 'rgba(239,68,68,0.25)',
+        logo: <Shield size={24} />,
+        category: 'Security',
+        year: '2026',
+    },
+    {
+        name: 'CS250: Python for Data Science',
+        issuer: 'Saylor Academy',
+        file: '/CERTIFICATIONS/8607249395VGcertificates.pdf',
+        accent: '#22c55e',
+        glow: 'rgba(34,197,94,0.25)',
+        logo: <Code size={24} />,
+        category: 'Programming',
+        year: '2025',
+    },
+    {
+        name: 'Data Science & Analytics',
+        issuer: 'HP LIFE',
+        file: '/CERTIFICATIONS/Data Science & Analytics.pdf',
+        accent: '#1F70C1',
+        glow: 'rgba(31,112,193,0.25)',
+        logo: <Lightbulb size={24} />,
+        category: 'Programming',
+        year: '2026',
+    },
+    {
+        name: 'Software Engineering Job Simulation',
+        issuer: 'JPMorgan Chase & Co. (Forage)',
+        file: '/CERTIFICATIONS/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_6a3b9d866c3b10897bd7c19d_1782403059096_completion_certificate.pdf',
+        accent: '#0078D4',
+        glow: 'rgba(0,120,212,0.25)',
+        logo: <Settings size={24} />,
+        category: 'Programming',
+        year: '2026',
+    },
+    {
+        name: 'Ethical Hacker',
+        issuer: 'Cisco Networking Academy',
+        file: '/CERTIFICATIONS/Ethical_Hacker_certificate_2403a52222-sru-edu-in_ae4f7007-8879-484f-a00d-719136f8eccd.pdf',
+        accent: '#1BA0D7',
+        glow: 'rgba(27,160,215,0.25)',
+        logo: <ShieldAlert size={24} />,
+        category: 'Security',
+        year: '2026',
+    },
+    {
+        name: 'Introduction to Git and GitHub',
+        issuer: 'Google (Coursera)',
+        file: '/CERTIFICATIONS/INTODUCTION TO GIT & GITHUB.pdf',
+        accent: '#a855f7',
+        glow: 'rgba(168,85,247,0.25)',
+        logo: <Trophy size={24} />,
         category: 'General',
-        year: '2024',
+        year: '2025',
+    },
+    {
+        name: 'Data Analytics Job Simulation',
+        issuer: 'Deloitte (Forage)',
+        file: '/CERTIFICATIONS/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_6a3b9d866c3b10897bd7c19d_1782313828265_completion_certificate.pdf',
+        accent: '#1F70C1',
+        glow: 'rgba(31,112,193,0.25)',
+        logo: <Award size={24} />,
+        category: 'Technology',
+        year: '2026',
     },
 ];
 
@@ -213,6 +283,11 @@ const Certifications = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [showAll, setShowAll] = useState(false);
 
+    const totalCerts = CERTIFICATIONS.length;
+    const awsCerts = CERTIFICATIONS.filter((c) => c.issuer.includes('Amazon Web Services') || c.issuer.includes('AWS')).length;
+    const aiCerts = CERTIFICATIONS.filter((c) => c.category === 'AI').length;
+    const networkCerts = CERTIFICATIONS.filter((c) => c.category === 'Networking').length;
+
     useGSAP(
         () => {
             gsap.fromTo(
@@ -261,22 +336,22 @@ const Certifications = () => {
                     <div className="cert-stats-row">
                         <div className="cert-stat-chip">
                             <ShieldCheck size={18} className="cert-stat-icon" />
-                            <span className="cert-stat-number">13</span>
+                            <span className="cert-stat-number">{totalCerts}</span>
                             <span className="cert-stat-label">Total Certs</span>
                         </div>
                         <div className="cert-stat-chip">
                             <Award size={18} className="cert-stat-icon cert-stat-icon--aws" />
-                            <span className="cert-stat-number">4</span>
+                            <span className="cert-stat-number">{awsCerts}</span>
                             <span className="cert-stat-label">AWS Badges</span>
                         </div>
                         <div className="cert-stat-chip">
                             <Bot size={18} className="cert-stat-icon" />
-                            <span className="cert-stat-number">3</span>
+                            <span className="cert-stat-number">{aiCerts}</span>
                             <span className="cert-stat-label">AI / ML</span>
                         </div>
                         <div className="cert-stat-chip">
                             <Radio size={18} className="cert-stat-icon" />
-                            <span className="cert-stat-number">2</span>
+                            <span className="cert-stat-number">{networkCerts}</span>
                             <span className="cert-stat-label">Networking</span>
                         </div>
                     </div>
@@ -307,6 +382,7 @@ const Certifications = () => {
                     <div
                         className="cert-modal-panel"
                         onClick={(e) => e.stopPropagation()}
+                        data-lenis-prevent
                     >
                         {/* Modal header */}
                         <div className="cert-modal-header">

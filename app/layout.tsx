@@ -30,8 +30,57 @@ const robotoFlex = Roboto_Flex({
 });
 
 export const metadata: Metadata = {
-    title: 'Portfolio - Vengala Gagan Chandra Tej',
-    description: 'Personal portfolio of Vengala Gagan Chandra Tej | Full Stack Developer | CS Student',
+    title: 'Vengala Gagan Chandra Tej | Full Stack Developer',
+    description:
+        'Personal portfolio of Vengala Gagan Chandra Tej — Full Stack Developer skilled in React, Next.js, Python, Node.js, and AI/ML. Building modern web experiences.',
+    keywords: [
+        'Vengala Gagan',
+        'Full Stack Developer',
+        'React Developer',
+        'Next.js',
+        'Python',
+        'Node.js',
+        'AI ML',
+        'Portfolio',
+        'Web Developer India',
+    ],
+    authors: [{ name: 'Vengala Gagan Chandra Tej' }],
+    creator: 'Vengala Gagan Chandra Tej',
+    metadataBase: new URL('https://gaganportfolio.vercel.app'),
+    openGraph: {
+        type: 'website',
+        url: 'https://gaganportfolio.vercel.app',
+        title: 'Vengala Gagan Chandra Tej | Full Stack Developer',
+        description:
+            'Full Stack Developer • React • Next.js • Python • Node.js • AI/ML Enthusiast. Check out my portfolio and projects.',
+        siteName: 'Vengala Gagan — Portfolio',
+        images: [
+            {
+                url: '/og-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'Vengala Gagan Chandra Tej — Full Stack Developer Portfolio',
+            },
+        ],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Vengala Gagan Chandra Tej | Full Stack Developer',
+        description:
+            'Full Stack Developer • React • Next.js • Python • Node.js • AI/ML. Explore my projects and work.',
+        images: ['/og-image.png'],
+        creator: '@gagan_vengala',
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
 };
 
 export default function RootLayout({
@@ -40,7 +89,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             <GoogleAnalytics gaId="G-MHLY1LNGY5" />
             <Script id="hotjar" strategy="afterInteractive">
                 {`(function(h,o,t,j,a,r){
@@ -54,6 +103,7 @@ export default function RootLayout({
             </Script>
             <body
                 className={`${antonFont.variable} ${robotoFlex.variable} antialiased`}
+                suppressHydrationWarning
             >
                 <ReactLenis
                     root
