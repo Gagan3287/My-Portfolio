@@ -46,17 +46,17 @@ export const metadata: Metadata = {
     ],
     authors: [{ name: 'Vengala Gagan Chandra Tej' }],
     creator: 'Vengala Gagan Chandra Tej',
-    metadataBase: new URL('https://gaganportfolio.vercel.app'),
+    metadataBase: new URL('https://my-portfolio-sage-zeta-64.vercel.app'),
     openGraph: {
         type: 'website',
-        url: 'https://gaganportfolio.vercel.app',
+        url: 'https://my-portfolio-sage-zeta-64.vercel.app',
         title: 'Vengala Gagan Chandra Tej | Full Stack Developer',
         description:
             'Full Stack Developer • React • Next.js • Python • Node.js • AI/ML Enthusiast. Check out my portfolio and projects.',
         siteName: 'Vengala Gagan — Portfolio',
         images: [
             {
-                url: '/og-image.png',
+                url: '/THUMBNAIL.png',
                 width: 1200,
                 height: 630,
                 alt: 'Vengala Gagan Chandra Tej — Full Stack Developer Portfolio',
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
         title: 'Vengala Gagan Chandra Tej | Full Stack Developer',
         description:
             'Full Stack Developer • React • Next.js • Python • Node.js • AI/ML. Explore my projects and work.',
-        images: ['/og-image.png'],
+        images: ['/THUMBNAIL.png'],
         creator: '@gagan_vengala',
     },
     robots: {
