@@ -68,7 +68,7 @@ export const metadata: Metadata = {
         title: 'Vengala Gagan Chandra Tej | Full Stack Developer',
         description:
             'Full Stack Developer • React • Next.js • Python • Node.js • AI/ML. Explore my projects and work.',
-        images: ['/THUMBNAIL.jpg'],
+        images: ['/og-image.png'],
         creator: '@gagan_vengala',
     },
     robots: {
