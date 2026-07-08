@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         siteName: 'Vengala Gagan — Portfolio',
         images: [
             {
-                url: '/THUMBNAIL.jpg',
+                url: '/og-image.png',
                 width: 1200,
                 height: 630,
                 alt: 'Vengala Gagan Chandra Tej — Full Stack Developer Portfolio',
