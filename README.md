@@ -94,10 +94,6 @@ https://my-portfolio-sage-zeta-64.vercel.app/
 
 ---
 
-## 📸 Preview
-
-
-![Portfolio Preview](public/preview.png)
 
 ---
 
