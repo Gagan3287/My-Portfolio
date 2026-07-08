@@ -1,6 +1,6 @@
 # 🚀 My Portfolio Website
 
-![Portfolio Screenshot](https://github.com/user-attachments/assets/...)
+![Portfolio Preview](publicpreview.png)
 
 🌐 **Live Demo:** https://my-portfolio-sage-zeta-64.vercel.app/
 
@@ -96,9 +96,8 @@ https://my-portfolio-sage-zeta-64.vercel.app/
 
 ## 📸 Preview
 
-> Replace the image below with your latest portfolio screenshot.
 
-![Portfolio Screenshot]
+![Portfolio Preview](public/preview.png)
 
 ---
 
