@@ -98,7 +98,7 @@ https://my-portfolio-sage-zeta-64.vercel.app/
 
 > Replace the image below with your latest portfolio screenshot.
 
-![Portfolio Screenshot](https://github.com/user-attachments/assets/ade45c4b-b2cb-46cb-b8a6-31cad3bd0c5a)
+![Portfolio Screenshot]
 
 ---
 
