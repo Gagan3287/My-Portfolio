@@ -3,7 +3,7 @@ import SectionTitle from '@/components/SectionTitle';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import { ExternalLink, X, ShieldCheck, Award, Cloud, Settings, Shield, Globe, Bot, Lightbulb, Network, Radio, Trophy, ShieldAlert, Code, Cpu, FileBadge } from 'lucide-react';
+import { ExternalLink, X, ShieldCheck, Award, Cloud, Settings, Shield, Globe, Bot, Lightbulb, Network, Radio, Trophy, ShieldAlert, Code, Cpu, FileBadge, Palette, BarChart2, Building2, FileBadge2, Briefcase } from 'lucide-react';
 import { useRef, useState } from 'react';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -211,6 +211,66 @@ const CERTIFICATIONS = [
         category: 'Technology',
         year: '2026',
     },
+    {
+        name: 'Canva Essentials',
+        issuer: 'Canva',
+        file: '/CERTIFICATIONS/canva-essentials-certificate.pdf',
+        accent: '#00C4CC',
+        glow: 'rgba(0,196,204,0.25)',
+        logo: <Palette size={24} />,
+        category: 'Design',
+        year: '2025',
+    },
+    {
+        name: 'Microsoft Power BI',
+        issuer: 'Microsoft',
+        file: '/CERTIFICATIONS/microsoft power bi.pdf',
+        accent: '#F2C811',
+        glow: 'rgba(242,200,17,0.25)',
+        logo: <BarChart2 size={24} />,
+        category: 'Technology',
+        year: '2025',
+    },
+    {
+        name: 'Software Engineer Intern',
+        issuer: 'CodSoft',
+        file: '/CERTIFICATIONS/software_engineer_intern certificate.pdf',
+        accent: '#a855f7',
+        glow: 'rgba(168,85,247,0.25)',
+        logo: <Briefcase size={24} />,
+        category: 'Programming',
+        year: '2025',
+    },
+    {
+        name: 'TCS iON Career Edge',
+        issuer: 'TCS iON',
+        file: '/CERTIFICATIONS/TCSion.pdf',
+        accent: '#003087',
+        glow: 'rgba(0,48,135,0.25)',
+        logo: <Building2 size={24} />,
+        category: 'Technology',
+        year: '2025',
+    },
+    {
+        name: 'Data Analysis',
+        issuer: 'HP LIFE',
+        file: '/CERTIFICATIONS/hp-data analysis.pdf',
+        accent: '#0096D6',
+        glow: 'rgba(0,150,214,0.25)',
+        logo: <BarChart2 size={24} />,
+        category: 'Technology',
+        year: '2025',
+    },
+    {
+        name: 'Completion Certificate',
+        issuer: 'Certified',
+        file: '/CERTIFICATIONS/CERT1.pdf',
+        accent: '#f59e0b',
+        glow: 'rgba(245,158,11,0.25)',
+        logo: <FileBadge2 size={24} />,
+        category: 'General',
+        year: '2025',
+    },
 ];
 
 const PREVIEW_COUNT = 6;
@@ -225,6 +285,7 @@ const CATEGORY_COLORS: Record<string, string> = {
     Technology: '#1F70C1',
     Programming: '#22c55e',
     General: '#6366f1',
+    Design: '#00C4CC',
 };
 
 // ─── CertCard ─────────────────────────────────────────────────────────────────

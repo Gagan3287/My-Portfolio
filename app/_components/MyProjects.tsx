@@ -3,7 +3,7 @@ import SectionTitle from '@/components/SectionTitle';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import { ExternalLink, Sparkles, Brain, Zap, Globe } from 'lucide-react';
+import { ExternalLink, Sparkles, Brain, Zap, Globe, Bot } from 'lucide-react';
 import { useRef } from 'react';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -31,6 +31,29 @@ const PROJECTS = [
         glow: 'rgba(168,85,247,0.28)',
         status: 'Live',
         year: '2025',
+        Icon: Brain,
+    },
+    {
+        id: 'rulebot',
+        name: 'RuleBot – Intelligent Rule-Based AI Chatbot',
+        tagline: 'Smart Conversations Powered by a Rule-Based Engine',
+        description:
+            'RuleBot is a full-stack AI chatbot that delivers intelligent, context-aware responses through a deterministic rule-based engine — no generative AI required. It features a sleek Next.js frontend, a high-performance FastAPI backend, seamless REST API communication, full Docker containerisation, and cloud deployment on Vercel & Render. The project demonstrates clean frontend-backend integration, scalable API design, and a modular architecture that is easy to extend.',
+        features: [
+            'Rule-based AI response engine',
+            'Responsive Next.js chat UI',
+            'FastAPI backend with REST API',
+            'Dockerised & cloud-deployed (Vercel + Render)',
+            'Modular, easily extensible architecture',
+        ],
+        tech: ['Next.js', 'React', 'FastAPI', 'Python', 'Docker', 'REST API', 'Vercel', 'Render'],
+        url: 'https://codsoft-task-01-phi.vercel.app/',
+        accent: '#a855f7',
+        accentSecondary: '#6366f1',
+        glow: 'rgba(168,85,247,0.28)',
+        status: 'Live',
+        year: '2025',
+        Icon: Bot,
     },
 ];
 
@@ -51,7 +74,7 @@ const FeatureItem = ({ text }: { text: string }) => (
 
 // ─── Project card ──────────────────────────────────────────────────────────────
 
-const ProjectCard = ({ project }: { project: (typeof PROJECTS)[0] }) => (
+const ProjectCard = ({ project }: { project: (typeof PROJECTS)[number] }) => (
     <div
         className="project-card"
         style={
@@ -74,7 +97,7 @@ const ProjectCard = ({ project }: { project: (typeof PROJECTS)[0] }) => (
             {/* Left: icon + meta */}
             <div className="project-card__left">
                 <div className="project-card__icon-wrap">
-                    <Brain size={28} />
+                    <project.Icon size={28} />
                 </div>
 
                 {/* Status + Year */}

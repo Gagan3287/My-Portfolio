@@ -279,7 +279,7 @@ export const PROJECTS: IProject[] = [
 export const MY_EDUCATION = [
     {
         degree: 'B.Tech',
-        institution: 'Sr University',
+        institution: 'SR University',
     },
     {
         degree: 'Secondary School',

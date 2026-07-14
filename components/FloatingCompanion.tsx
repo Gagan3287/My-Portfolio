@@ -15,7 +15,7 @@ const KB = {
     },
     projects: {
         keywords: ['project', 'work', 'built', 'portfolio', 'app', 'website', 'developed', 'created', 'made'],
-        answer: `Here are some of Gagan's key projects 🚀\n\n**1. Electro EV** — Full-stack agency platform with Payload CMS, Next.js ISR, and Swiper.js sliders. Live: electroev.co.uk\n\n**2. Epikcart** — Feature-rich e-commerce platform with multi-language RTL support, Redux, and dynamic filtering.\n\n**3. Resume Roaster** — AI-powered resume feedback app using GPT-4, Next.js, PostgreSQL, and Prisma.\n\n**4. Real Estate (PropertyPro)** — Property management platform with React, Framer Motion, and i18n support.\n\n**5. devLinks** — Link-sharing app built with Next.js, Formik, and drag-and-drop functionality.`,
+        answer: `Here are Gagan's key projects 🚀\n\n**1. Quill AI** — Next-gen AI writing & research platform powered by OpenAI large language models. Features content generation, smart summarisation, context-aware Q&A, and real-time grammar suggestions.\n🔗 quill-ai-eight.vercel.app\n\n**2. RuleBot – Intelligent Rule-Based AI Chatbot** — Full-stack AI chatbot with a Next.js frontend and FastAPI backend. Uses a rule-based engine (no generative AI), REST API, Docker, and is deployed on Vercel & Render.\n🔗 codsoft-task-01-phi.vercel.app`,
     },
     certifications: {
         keywords: ['certif', 'certificate', 'aws', 'azure', 'cisco', 'credential', 'course', 'badge', 'achievement', 'qualified'],
@@ -460,8 +460,9 @@ export default function FloatingCompanion() {
 
                     {/* Messages */}
                     <div
-                        style={{ flex: 1, overflowY: 'auto', padding: '14px 12px', display: 'flex', flexDirection: 'column', gap: '10px' }}
+                        style={{ flex: 1, overflowY: 'auto', padding: '14px 12px', display: 'flex', flexDirection: 'column', gap: '10px', minHeight: 0, overscrollBehavior: 'contain' }}
                         className="companion-scroll"
+                        data-lenis-prevent
                     >
                         {messages.map((msg) => (
                             <div
