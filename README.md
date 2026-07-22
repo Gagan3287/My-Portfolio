@@ -1,6 +1,7 @@
 <div align="center">
 
 # 🚀 Vengala Gagan Chandra Tej — Portfolio
+![Portfolio Preview](publicpreview.png)
 
 ### Full Stack Developer · AI/ML Enthusiast 
 
