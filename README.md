@@ -2,8 +2,7 @@
 
 # 🚀 Vengala Gagan Chandra Tej — Portfolio
 ![Portfolio Preview](publicpreview.png)
-
-### Full Stack Developer · AI/ML Enthusiast 
+### Full Stack Developer · AI/ML Enthusiast · Cloud Builder
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-black?style=for-the-badge&logo=vercel)](https://vengala-gagan.vercel.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
@@ -11,7 +10,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
 
-**[Live Site](https://vengala-gagan.vercel.app/) · [Report Bug](https://github.com/Gagan3287/portfolio-2.0-main/issues) · [Request Feature](https://github.com/Gagan3287/portfolio-2.0-main/issues)**
+**[Live Site](https://vengala-gagan.vercel.app/) · [Report Bug](https://github.com/Gagan3287/My-Portfolio/issues) · [Request Feature](https://github.com/Gagan3287/My-Portfolio/issues)**
 
 </div>
 
@@ -74,10 +73,10 @@ A full-stack chatbot delivering deterministic, context-aware responses — no ge
 
 \`\`\`bash
 # Clone the repository
-git clone https://github.com/Gagan3287/portfolio-2.0-main.git
+git clone https://github.com/Gagan3287/My-Portfolio.git
 
 # Move into the project
-cd portfolio-2.0-main
+cd My-Portfolio
 
 # Install dependencies
 pnpm install
@@ -126,7 +125,7 @@ Contributions, issues, and feature requests are welcome.
 
 If this project helped or inspired you, consider giving it a star on GitHub — it genuinely helps visibility.
 
-**Repository:** [github.com/Gagan3287/portfolio-2.0-main](https://github.com/Gagan3287/portfolio-2.0-main)
+**Repository:** [github.com/Gagan3287/My-Portfolio](https://github.com/Gagan3287/My-Portfolio)
 
 ## 📬 Connect With Me
 
@@ -139,12 +138,12 @@ If this project helped or inspired you, consider giving it a star on GitHub — 
 
 ## 📄 License
 
-This project is licensed under the MIT License — see the [LICENSE](https://github.com/Gagan3287/portfolio-2.0-main/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License — see the [LICENSE](https://github.com/Gagan3287/My-Portfolio/blob/main/LICENSE) file for details.
 
 ---
 
 <div align="center">
 
-Built with focus, curiosity, and way too much coffee — **Vengala Gagan Chandra Tej**
+☕ 🖤Built with focus, curiosity, and way too much coffee — **Vengala Gagan Chandra Tej**🖤 ☕
 
 </div>
