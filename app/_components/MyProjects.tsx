@@ -3,7 +3,7 @@ import SectionTitle from '@/components/SectionTitle';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import { ExternalLink, Sparkles, Brain, Zap, Globe, Bot } from 'lucide-react';
+import { ExternalLink, Sparkles, Brain, Zap, Globe, Bot, GraduationCap, Github } from 'lucide-react';
 import { useRef } from 'react';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -11,6 +11,29 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 // ─── Project data ──────────────────────────────────────────────────────────────
 
 const PROJECTS = [
+    {
+        id: 'studymate-ai',
+        name: 'StudyMate AI',
+        tagline: 'AI-Powered Study & Placement Companion for Engineering Students',
+        description:
+            `StudyMate AI is a full-stack platform that transforms how engineering students study and prepare for placements. Students upload their own class notes and PDFs, and the platform generates instant summaries, flashcards, and quizzes \u2014 while a RAG-grounded chatbot answers questions using only their own uploaded material, with real source citations, so answers stay accurate and grounded in the actual syllabus rather than the open internet. A self-trained machine learning model predicts each flashcard's memory retention probability to drive adaptive spaced-repetition scheduling, going beyond fixed revision intervals. An interactive knowledge graph visualizes how concepts connect across a student's notes, and a resume-vs-job-description skill-gap analyzer helps with placement prep.`,
+        features: [
+            'AI-generated summaries, flashcards & quizzes from your own notes',
+            'RAG-grounded doubt-solving chat with real source page citations',
+            'Self-trained ML retention model (Half-Life Regression) for adaptive spaced repetition',
+            'Interactive knowledge graph across all uploaded documents',
+            'Resume vs job-description skill-gap analyzer for placement prep',
+        ],
+        tech: ['Next.js', 'FastAPI', 'PostgreSQL', 'Gemini', 'Groq', 'Scikit-Learn', 'Tailwind CSS', 'Vercel', 'Render'],
+        url: 'https://studymate-aix.vercel.app/',
+        github: 'https://github.com/Gagan3287/Student-Ai',
+        accent: '#06b6d4',
+        accentSecondary: '#3b82f6',
+        glow: 'rgba(6,182,212,0.28)',
+        status: 'Live',
+        year: '2026',
+        Icon: GraduationCap,
+    },
     {
         id: 'quill-ai',
         name: 'Quill AI',
@@ -26,11 +49,12 @@ const PROJECTS = [
         ],
         tech: ['Next.js', 'OpenAI', 'Vercel', 'TypeScript', 'Tailwind CSS'],
         url: 'https://quill-ai-eight.vercel.app/',
+        github: 'https://github.com/Gagan3287/Quill-AI',
         accent: '#a855f7',
         accentSecondary: '#6366f1',
         glow: 'rgba(168,85,247,0.28)',
         status: 'Live',
-        year: '2025',
+        year: '2026',
         Icon: Brain,
     },
     {
@@ -48,11 +72,12 @@ const PROJECTS = [
         ],
         tech: ['Next.js', 'React', 'FastAPI', 'Python', 'Docker', 'REST API', 'Vercel', 'Render'],
         url: 'https://codsoft-task-01-phi.vercel.app/',
-        accent: '#a855f7',
-        accentSecondary: '#6366f1',
-        glow: 'rgba(168,85,247,0.28)',
+        github: 'https://github.com/Gagan3287/Rule-Bot_Ai',
+        accent: '#a9f755b2',
+        accentSecondary: '#17850dc6',
+        glow: 'rgba(52, 198, 49, 0.66)',
         status: 'Live',
-        year: '2025',
+        year: '2026',
         Icon: Bot,
     },
 ];
@@ -109,18 +134,32 @@ const ProjectCard = ({ project }: { project: (typeof PROJECTS)[number] }) => (
                     <span className="project-card__year">{project.year}</span>
                 </div>
 
-                {/* CTA button */}
-                <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-open-btn"
-                    id={`open-${project.id}`}
-                >
-                    <Globe size={16} />
-                    <span>Open Website</span>
-                    <ExternalLink size={14} className="project-open-btn__arrow" />
-                </a>
+                {/* CTA buttons */}
+                <div className="project-cta-group">
+                    <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-open-btn"
+                        id={`open-${project.id}`}
+                    >
+                        <Globe size={16} />
+                        <span>Open Website</span>
+                        <ExternalLink size={14} className="project-open-btn__arrow" />
+                    </a>
+                    {project.github && (
+                        <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="project-source-btn"
+                            id={`source-${project.id}`}
+                        >
+                            <Github size={16} />
+                            <span>Source Code</span>
+                        </a>
+                    )}
+                </div>
             </div>
 
             {/* Right: content */}

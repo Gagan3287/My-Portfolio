@@ -7,7 +7,7 @@ export default function FooterAvatarWrapper() {
     return (
         <div
             className="relative w-full"
-            style={{ height: '220px' }}
+            style={{ height: '275px' }}
             aria-hidden="true"
         >
             <FooterAvatar />
@@ -15,7 +15,7 @@ export default function FooterAvatarWrapper() {
             <div
                 className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
                 style={{
-                    background: 'linear-gradient(to bottom, transparent, hsl(0 0% 13%))',
+                    background: 'linear-gradient(to bottom, transparent, hsl(0 0% 8%))',
                 }}
             />
         </div>

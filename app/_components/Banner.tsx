@@ -127,7 +127,7 @@ const Banner = () => {
                             <p className="text-muted-foreground text-sm">Certifications</p>
                         </div>
                         <div className="text-center">
-                            <h5 className="text-3xl font-anton text-primary mb-1">1</h5>
+                            <h5 className="text-3xl font-anton text-primary mb-1">3</h5>
                             <p className="text-muted-foreground text-sm">Projects Built</p>
                         </div>
                         <div className="text-center">
@@ -160,7 +160,7 @@ const Banner = () => {
                             <span className="stat-label">Certifications</span>
                         </div>
                         <div className="avatar-stat-chip">
-                            <span className="stat-num">1</span>
+                            <span className="stat-num">3</span>
                             <span className="stat-label">Projects</span>
                         </div>
                         <div className="avatar-stat-chip">
