@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     creator: 'Vengala Gagan Chandra Tej',
     metadataBase: new URL('https://vengala-gagan.vercel.app'),
     verification: {
-        google: '3CH9fc390vSq2JJ5CezvbmSaZbhFlS6O022Hi1blDS8',
+        google: 'DtrC8_6S7KcGkE3u39oQW4uZn8xbnJLJ9YWgJCQZXtQ',
     },
     openGraph: {
         type: 'website',
