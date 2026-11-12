@@ -155,6 +155,7 @@ const structuredData = {
                 'https://www.researchgate.net/profile/Gagan-Vengala',
                 'https://www.geeksforgeeks.org/profile/2403a5tyu3',
                 'https://scholar.google.com/citations?user=zWMaXuMAAAAJ&hl=en',
+                'https://www.kaggle.com/vengalagagan',
             ],
         },
     ],
