@@ -29,13 +29,27 @@ const robotoFlex = Roboto_Flex({
     variable: '--font-roboto-flex',
 });
 
+const SITE_URL = 'https://vengala-gagan.vercel.app';
+
 export const metadata: Metadata = {
-    title: 'Vengala Gagan Chandra Tej | Full Stack Developer',
+    metadataBase: new URL(SITE_URL),
+    title: {
+        default:
+            'Vengala Gagan Chandra Tej | Full Stack Developer Portfolio',
+        template: '%s | Vengala Gagan Chandra Tej',
+    },
     description:
-        'Personal portfolio of Vengala Gagan Chandra Tej — Full Stack Developer skilled in React, Next.js, Python, Node.js, and AI/ML. Building modern web experiences.',
+        'Portfolio of Vengala Gagan Chandra Tej, a Full Stack & AI/ML developer from Warangal, Telangana. Projects: Quill AI, FedLearn Hub, StudyMate AI, AyuLink, HomelyHub.',
+    alternates: {
+        canonical: '/',
+    },
     keywords: [
+        'Vengala Gagan Chandra Tej',
+        'Gagan Chandra Tej',
         'Vengala Gagan',
+        'Gagan Vengala portfolio',
         'Full Stack Developer',
+        'Full Stack Developer Warangal',
         'React Developer',
         'Next.js',
         'Python',
@@ -44,19 +58,19 @@ export const metadata: Metadata = {
         'Portfolio',
         'Web Developer India',
     ],
-    authors: [{ name: 'Vengala Gagan Chandra Tej' }],
+    authors: [{ name: 'Vengala Gagan Chandra Tej', url: SITE_URL }],
     creator: 'Vengala Gagan Chandra Tej',
-    metadataBase: new URL('https://vengala-gagan.vercel.app'),
     verification: {
         google: 'DtrC8_6S7KcGkE3u39oQW4uZn8xbnJLJ9YWgJCQZXtQ',
     },
     openGraph: {
         type: 'website',
-        url: 'https://vengala-gagan.vercel.app',
-        title: 'Vengala Gagan Chandra Tej | Full Stack Developer',
+        url: SITE_URL,
+        title: 'Vengala Gagan Chandra Tej | Full Stack Developer Portfolio',
         description:
-            'Full Stack Developer • React • Next.js • Python • Node.js • AI/ML Enthusiast. Check out my portfolio and projects.',
-        siteName: 'Vengala Gagan — Portfolio',
+            'Full Stack Developer • React • Next.js • Python • Node.js • AI/ML. Explore the projects and work of Vengala Gagan Chandra Tej from Warangal.',
+        siteName: 'Vengala Gagan Chandra Tej — Portfolio',
+        locale: 'en_IN',
         images: [
             {
                 url: '/og-image.png',
@@ -68,7 +82,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Vengala Gagan Chandra Tej | Full Stack Developer',
+        title: 'Vengala Gagan Chandra Tej | Full Stack Developer Portfolio',
         description:
             'Full Stack Developer • React • Next.js • Python • Node.js • AI/ML. Explore my projects and work.',
         images: ['/og-image.png'],
@@ -84,6 +98,66 @@ export const metadata: Metadata = {
             'max-snippet': -1,
         },
     },
+};
+
+const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+        {
+            '@type': 'WebSite',
+            '@id': `${SITE_URL}/#website`,
+            url: SITE_URL,
+            name: 'Vengala Gagan Chandra Tej — Portfolio',
+            description:
+                'Portfolio website of Vengala Gagan Chandra Tej, Full Stack & AI/ML developer from Warangal, Telangana.',
+            inLanguage: 'en',
+            publisher: { '@id': `${SITE_URL}/#person` },
+        },
+        {
+            '@type': 'Person',
+            '@id': `${SITE_URL}/#person`,
+            name: 'Vengala Gagan Chandra Tej',
+            alternateName: [
+                'Gagan Chandra Tej',
+                'Vengala Gagan',
+                'Gagan Vengala',
+                'Gagan3287',
+            ],
+            url: SITE_URL,
+            mainEntityOfPage: SITE_URL,
+            jobTitle: 'Full Stack Developer',
+            description:
+                'Full Stack and AI/ML developer from Warangal, Telangana, building RAG systems, full-stack platforms and federated learning apps.',
+            homeLocation: {
+                '@type': 'Place',
+                name: 'Warangal, Telangana, India',
+            },
+            alumniOf: {
+                '@type': 'CollegeOrUniversity',
+                name: 'SR University',
+            },
+            knowsAbout: [
+                'Full Stack Development',
+                'Next.js',
+                'React',
+                'Node.js',
+                'Python',
+                'FastAPI',
+                'Machine Learning',
+                'RAG Systems',
+                'Federated Learning',
+            ],
+            sameAs: [
+                'https://github.com/Gagan3287',
+                'https://www.linkedin.com/in/vengala-gagan-176a9433a/',
+                'https://leetcode.com/u/Vengala_Gagan/',
+                'https://www.instagram.com/gagan_vengala/',
+                'https://www.researchgate.net/profile/Gagan-Vengala',
+                'https://www.geeksforgeeks.org/profile/2403a5tyu3',
+                'https://scholar.google.com/citations?user=zWMaXuMAAAAJ&hl=en',
+            ],
+        },
+    ],
 };
 
 export default function RootLayout({
@@ -108,6 +182,15 @@ export default function RootLayout({
                 className={`${antonFont.variable} ${robotoFlex.variable} antialiased`}
                 suppressHydrationWarning
             >
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(structuredData).replace(
+                            /</g,
+                            '\\u003c'
+                        ),
+                    }}
+                />
                 <ReactLenis
                     root
                     options={{
@@ -115,15 +198,6 @@ export default function RootLayout({
                         duration: 1.4,
                     }}
                 >
-                    {/* <a
-                        href="https://forms.gle/t73XYJgWD5cJNr6e8"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-4 block bg-black text-center z-[1] text-sm py-2 hover:text-primary transition-all"
-                    >
-                        Frontend dev? I&apos;ll help you polish your resume —
-                        completely free.
-                    </a> */}
                     <Navbar />
                     <main>{children}</main>
                     <Footer />
