@@ -14,6 +14,7 @@ import StickyLinks from '@/components/StickyLinks';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import Script from 'next/script';
 import FloatingCompanionWrapper from '@/components/FloatingCompanionWrapper';
+import { SITE_URL, PROFILES } from '@/lib/site';
 
 const antonFont = Anton({
     weight: '400',
@@ -29,13 +30,10 @@ const robotoFlex = Roboto_Flex({
     variable: '--font-roboto-flex',
 });
 
-const SITE_URL = 'https://vengala-gagan.vercel.app';
-
 export const metadata: Metadata = {
     metadataBase: new URL(SITE_URL),
     title: {
-        default:
-            'Vengala Gagan Chandra Tej | Full Stack Developer Portfolio',
+        default: 'Vengala Gagan Chandra Tej | Full Stack Developer Portfolio',
         template: '%s | Vengala Gagan Chandra Tej',
     },
     description:
@@ -68,15 +66,15 @@ export const metadata: Metadata = {
         url: SITE_URL,
         title: 'Vengala Gagan Chandra Tej | Full Stack Developer Portfolio',
         description:
-            'Full Stack Developer • React • Next.js • Python • Node.js • AI/ML. Explore the projects and work of Vengala Gagan Chandra Tej from Warangal.',
-        siteName: 'Vengala Gagan Chandra Tej — Portfolio',
+            'Full Stack Developer | React | Next.js | Python | Node.js | AI/ML. Explore the projects and work of Vengala Gagan Chandra Tej from Warangal.',
+        siteName: 'Vengala Gagan Chandra Tej - Portfolio',
         locale: 'en_IN',
         images: [
             {
                 url: '/og-image.png',
                 width: 1200,
                 height: 630,
-                alt: 'Vengala Gagan Chandra Tej — Full Stack Developer Portfolio',
+                alt: 'Vengala Gagan Chandra Tej - Full Stack Developer Portfolio',
             },
         ],
     },
@@ -84,7 +82,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Vengala Gagan Chandra Tej | Full Stack Developer Portfolio',
         description:
-            'Full Stack Developer • React • Next.js • Python • Node.js • AI/ML. Explore my projects and work.',
+            'Full Stack Developer | React | Next.js | Python | Node.js | AI/ML. Explore my projects and work.',
         images: ['/og-image.png'],
         creator: '@gagan_vengala',
     },
@@ -107,7 +105,7 @@ const structuredData = {
             '@type': 'WebSite',
             '@id': `${SITE_URL}/#website`,
             url: SITE_URL,
-            name: 'Vengala Gagan Chandra Tej — Portfolio',
+            name: 'Vengala Gagan Chandra Tej - Portfolio',
             description:
                 'Portfolio website of Vengala Gagan Chandra Tej, Full Stack & AI/ML developer from Warangal, Telangana.',
             inLanguage: 'en',
@@ -135,6 +133,7 @@ const structuredData = {
             alumniOf: {
                 '@type': 'CollegeOrUniversity',
                 name: 'SR University',
+                url: 'https://www.sru.edu.in',
             },
             knowsAbout: [
                 'Full Stack Development',
@@ -147,16 +146,7 @@ const structuredData = {
                 'RAG Systems',
                 'Federated Learning',
             ],
-            sameAs: [
-                'https://github.com/Gagan3287',
-                'https://www.linkedin.com/in/vengala-gagan-176a9433a/',
-                'https://leetcode.com/u/Vengala_Gagan/',
-                'https://www.instagram.com/gagan_vengala/',
-                'https://www.researchgate.net/profile/Gagan-Vengala',
-                'https://www.geeksforgeeks.org/profile/2403a5tyu3',
-                'https://scholar.google.com/citations?user=zWMaXuMAAAAJ&hl=en',
-                'https://www.kaggle.com/vengalagagan',
-            ],
+            sameAs: PROFILES.map((p) => p.url),
         },
     ],
 };
@@ -188,7 +178,7 @@ export default function RootLayout({
                     dangerouslySetInnerHTML={{
                         __html: JSON.stringify(structuredData).replace(
                             /</g,
-                            '\\u003c'
+                            '\\u003c',
                         ),
                     }}
                 />

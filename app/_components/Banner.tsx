@@ -85,9 +85,12 @@ const Banner = () => {
                 className="container h-[100svh] min-h-[530px] max-md:pb-10 flex items-center justify-between gap-6"
                 ref={containerRef}
             >
-                {/* ── Left: Text content ─────────────────────────────────────── */}
+                {/* Left: Text content */}
                 <div className="flex flex-col justify-center items-start max-w-[520px] z-10 flex-shrink-0">
                     <h1 className="banner-title banner-slide leading-[.95] text-6xl sm:text-[80px] font-anton">
+                        <span className="sr-only">
+                            Vengala Gagan Chandra Tej,{' '}
+                        </span>
                         <span className="text-primary">FULL STACK</span>
                         <br />
                         <span className="ml-4">DEVELOPER</span>
@@ -96,7 +99,7 @@ const Banner = () => {
                     <p className="banner-description banner-slide mt-6 text-lg text-muted-foreground">
                         Hi! I&apos;m{' '}
                         <span className="font-medium text-foreground">
-                            Gagan Chandra Tej
+                            Vengala Gagan Chandra Tej
                         </span>
                         . A passionate Computer Science student and developer
                         building innovative, scalable web &amp; cloud solutions.
@@ -120,7 +123,7 @@ const Banner = () => {
                         </span>
                     </div>
 
-                    {/* Stats — visible below avatar on mobile, inline on desktop */}
+                    {/* Stats: visible below avatar on mobile, inline on desktop */}
                     <div className="flex items-center gap-8 mt-10 banner-slide md:hidden">
                         <div className="text-center">
                             <h5 className="text-3xl font-anton text-primary mb-1">13+</h5>
@@ -137,7 +140,7 @@ const Banner = () => {
                     </div>
                 </div>
 
-                {/* ── Right: 3D Avatar + glassmorphism backdrop ──────────────── */}
+                {/* Right: 3D Avatar + glassmorphism backdrop */}
                 <div
                     ref={avatarWrapRef}
                     className="avatar-hero-wrap"
@@ -153,7 +156,7 @@ const Banner = () => {
                     {/* Canvas */}
                     <AvatarCanvas mousePos={mousePos} containerRect={containerRect} />
 
-                    {/* Stats overlay — desktop only */}
+                    {/* Stats overlay: desktop only */}
                     <div className="avatar-stats-overlay banner-slide hidden md:flex">
                         <div className="avatar-stat-chip">
                             <span className="stat-num">13+</span>

@@ -1,12 +1,47 @@
 import type { MetadataRoute } from 'next';
+import { projects } from '@/lib/projects';
+import { posts } from '@/lib/posts';
+import { SITE_URL } from '@/lib/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
+    const now = new Date();
+
     return [
         {
-            url: 'https://vengala-gagan.vercel.app',
-            lastModified: new Date(),
+            url: SITE_URL,
+            lastModified: now,
             changeFrequency: 'monthly',
             priority: 1,
         },
+        {
+            url: `${SITE_URL}/about`,
+            lastModified: now,
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${SITE_URL}/sr-university`,
+            lastModified: now,
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${SITE_URL}/blog`,
+            lastModified: now,
+            changeFrequency: 'weekly',
+            priority: 0.8,
+        },
+        ...posts.map((p) => ({
+            url: `${SITE_URL}/blog/${p.slug}`,
+            lastModified: new Date(p.date),
+            changeFrequency: 'monthly' as const,
+            priority: 0.7,
+        })),
+        ...projects.map((p) => ({
+            url: `${SITE_URL}/projects/${p.slug}`,
+            lastModified: now,
+            changeFrequency: 'monthly' as const,
+            priority: 0.7,
+        })),
     ];
 }
