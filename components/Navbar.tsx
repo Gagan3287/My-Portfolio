@@ -10,6 +10,8 @@ const COLORS = [
     'bg-blue-500 text-white',
     'bg-teal-500 text-black',
     'bg-indigo-500 text-white',
+    'bg-pink-500 text-white',
+    'bg-orange-500 text-black',
 ];
 
 const MENU_LINKS = [
@@ -25,13 +27,29 @@ const MENU_LINKS = [
         name: 'Education',
         url: '/#my-education',
     },
+    {
+        name: 'Projects',
+        url: '/#projects',
+    },
+    {
+        name: 'Full Profile',
+        url: '/about',
+    },
+    {
+        name: 'SR University',
+        url: '/sr-university',
+    },
+    {
+        name: 'Blog',
+        url: '/blog',
+    },	
 ];
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const router = useRouter();
 
-    // ── Lock / unlock body scroll when menu opens ────────────────────────────
+    // Lock / unlock body scroll when menu opens
     useEffect(() => {
         if (isMenuOpen) {
             document.body.style.overflow = 'hidden';
@@ -46,7 +64,7 @@ const Navbar = () => {
         };
     }, [isMenuOpen]);
 
-    // ── Close menu on Escape key ─────────────────────────────────────────────
+    // Close menu on Escape key
     useEffect(() => {
         const handleKey = (e: KeyboardEvent) => {
             if (e.key === 'Escape') setIsMenuOpen(false);
@@ -66,11 +84,10 @@ const Navbar = () => {
 
     return (
         <>
-            {/* ── Hamburger button ─────────────────────────────────────────────
+            {/* Hamburger button.
                 Fixed so it is always visible and above every other element.
                 z-[9999] ensures it sits above FloatingCompanion (z-[9998])
-                and Preloader (z-[100]).
-            ─────────────────────────────────────────────────────────────────── */}
+                and Preloader (z-[100]). */}
             <button
                 aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={isMenuOpen}
@@ -99,11 +116,10 @@ const Navbar = () => {
                 />
             </button>
 
-            {/* ── Backdrop overlay ─────────────────────────────────────────────
+            {/* Backdrop overlay.
                 z-[9990]: above page content, below the menu panel and button.
                 pointer-events controlled by visibility so it only intercepts
-                taps when the menu is actually open.
-            ─────────────────────────────────────────────────────────────────── */}
+                taps when the menu is actually open. */}
             <div
                 aria-hidden="true"
                 className={cn(
@@ -117,14 +133,10 @@ const Navbar = () => {
                 onTouchMove={(e) => e.preventDefault()}
             />
 
-            {/* ── Slide-in menu panel ──────────────────────────────────────────
-                z-[9995]: above the overlay (9990) and FloatingCompanion (9998
-                is on the page itself — once the overlay covers it the companion
-                is no longer interactive anyway). The button (9999) is always on top.
-                
-                REMOVED overflow-hidden so child elements are never clipped and
-                pointer events always propagate correctly.
-            ─────────────────────────────────────────────────────────────────── */}
+            {/* Slide-in menu panel.
+                z-[9995]: above the overlay (9990). The button (9999) is always on top.
+                overflow-hidden is intentionally NOT used so child elements are
+                never clipped and pointer events always propagate correctly. */}
             <div
                 role="dialog"
                 aria-modal="true"
@@ -146,7 +158,7 @@ const Navbar = () => {
                     )}
                 />
 
-                {/* ── Menu content ─────────────────────────────────────────── */}
+                {/* Menu content */}
                 <div className="relative z-10 grow flex md:items-center w-full max-w-[300px] mx-8 sm:mx-auto">
                     <div className="flex gap-10 lg:justify-between max-lg:flex-col w-full">
                         {/* Social links */}
@@ -192,7 +204,7 @@ const Navbar = () => {
                                                 className={cn(
                                                     'size-3.5 bg-white/20 rounded-full flex items-center justify-center',
                                                     'group-hover:scale-[200%] transition-all',
-                                                    COLORS[idx],
+                                                    COLORS[idx % COLORS.length],
                                                 )}
                                             >
                                                 <MoveUpRight

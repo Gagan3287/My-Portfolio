@@ -3,12 +3,24 @@ import SectionTitle from '@/components/SectionTitle';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import { ExternalLink, Sparkles, Brain, Zap, Globe, Bot, GraduationCap, Github } from 'lucide-react';
+import {
+    ExternalLink,
+    Sparkles,
+    Brain,
+    Zap,
+    Globe,
+    Bot,
+    GraduationCap,
+    Github,
+    ArrowRight,
+} from 'lucide-react';
+import Link from 'next/link';
 import { useRef } from 'react';
+import { projects } from '@/lib/projects';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-// ─── Project data ──────────────────────────────────────────────────────────────
+// Project data
 
 const PROJECTS = [
     {
@@ -39,7 +51,7 @@ const PROJECTS = [
         name: 'Quill AI',
         tagline: 'Your Intelligent Writing & Research Companion',
         description:
-            'Quill AI is a next-generation AI-powered platform designed to supercharge writing, research, and knowledge synthesis. Leveraging advanced large language models, Quill AI helps you brainstorm ideas, draft content, summarize documents, answer complex questions, and refine your prose — all in a seamless, intuitive interface. Whether you are a student, researcher, developer, or creative professional, Quill AI adapts to your workflow and amplifies your productivity.',
+            'Quill AI is a next-generation AI-powered platform designed to supercharge writing, research, and knowledge synthesis. Leveraging advanced large language models, Quill AI helps you brainstorm ideas, draft content, summarize documents, answer complex questions, and refine your prose \u2014 all in a seamless, intuitive interface. Whether you are a student, researcher, developer, or creative professional, Quill AI adapts to your workflow and amplifies your productivity.',
         features: [
             'AI-powered writing & content generation',
             'Smart document summarisation',
@@ -59,10 +71,10 @@ const PROJECTS = [
     },
     {
         id: 'rulebot',
-        name: 'RuleBot – Intelligent Rule-Based AI Chatbot',
+        name: 'RuleBot \u2013 Intelligent Rule-Based AI Chatbot',
         tagline: 'Smart Conversations Powered by a Rule-Based Engine',
         description:
-            'RuleBot is a full-stack AI chatbot that delivers intelligent, context-aware responses through a deterministic rule-based engine — no generative AI required. It features a sleek Next.js frontend, a high-performance FastAPI backend, seamless REST API communication, full Docker containerisation, and cloud deployment on Vercel & Render. The project demonstrates clean frontend-backend integration, scalable API design, and a modular architecture that is easy to extend.',
+            'RuleBot is a full-stack AI chatbot that delivers intelligent, context-aware responses through a deterministic rule-based engine \u2014 no generative AI required. It features a sleek Next.js frontend, a high-performance FastAPI backend, seamless REST API communication, full Docker containerisation, and cloud deployment on Vercel & Render. The project demonstrates clean frontend-backend integration, scalable API design, and a modular architecture that is easy to extend.',
         features: [
             'Rule-based AI response engine',
             'Responsive Next.js chat UI',
@@ -82,13 +94,18 @@ const PROJECTS = [
     },
 ];
 
-// ─── Tech tag component ────────────────────────────────────────────────────────
+// Projects that have a detail page but no card above
+const MORE_PROJECTS = projects.filter(
+    (p) => !PROJECTS.some((card) => card.id === p.slug),
+);
+
+// Tech tag component
 
 const TechTag = ({ label }: { label: string }) => (
     <span className="project-tech-tag">{label}</span>
 );
 
-// ─── Feature item ──────────────────────────────────────────────────────────────
+// Feature item
 
 const FeatureItem = ({ text }: { text: string }) => (
     <li className="project-feature-item">
@@ -97,7 +114,7 @@ const FeatureItem = ({ text }: { text: string }) => (
     </li>
 );
 
-// ─── Project card ──────────────────────────────────────────────────────────────
+// Project card
 
 const ProjectCard = ({ project }: { project: (typeof PROJECTS)[number] }) => (
     <div
@@ -116,7 +133,7 @@ const ProjectCard = ({ project }: { project: (typeof PROJECTS)[number] }) => (
         {/* Glow overlay */}
         <div className="project-card__glow-overlay" />
 
-        {/* ── Inner layout ── */}
+        {/* Inner layout */}
         <div className="project-card__inner">
 
             {/* Left: icon + meta */}
@@ -159,6 +176,14 @@ const ProjectCard = ({ project }: { project: (typeof PROJECTS)[number] }) => (
                             <span>Source Code</span>
                         </a>
                     )}
+                    <Link
+                        href={`/projects/${project.id}`}
+                        className="project-source-btn"
+                        id={`details-${project.id}`}
+                    >
+                        <ArrowRight size={16} />
+                        <span>Full Details</span>
+                    </Link>
                 </div>
             </div>
 
@@ -190,7 +215,7 @@ const ProjectCard = ({ project }: { project: (typeof PROJECTS)[number] }) => (
     </div>
 );
 
-// ─── MyProjects section ───────────────────────────────────────────────────────
+// MyProjects section
 
 const MyProjects = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -258,7 +283,7 @@ const MyProjects = () => {
 
                 {/* Subtitle */}
                 <p className="projects-subtitle">
-                    A showcase of my latest work — where ideas meet execution.
+                    A showcase of my latest work &mdash; where ideas meet execution.
                 </p>
 
                 {/* Cards */}
@@ -267,6 +292,30 @@ const MyProjects = () => {
                         <ProjectCard key={project.id} project={project} />
                     ))}
                 </div>
+
+                {/* More projects (link to detail pages) */}
+                {MORE_PROJECTS.length > 0 && (
+                    <div className="mt-16">
+                        <p className="pb-3 border-b text-muted-foreground mb-6">
+                            More projects.
+                        </p>
+                        <ul className="grid gap-4 md:grid-cols-2">
+                            {MORE_PROJECTS.map((p) => (
+                                <li key={p.slug}>
+                                    <Link
+                                        href={`/projects/${p.slug}`}
+                                        className="block h-full rounded-xl border border-white/10 p-5 transition-colors hover:border-primary/60"
+                                    >
+                                        <h3 className="text-xl font-semibold">{p.name}</h3>
+                                        <p className="mt-1 text-sm text-muted-foreground">
+                                            {p.tagline}
+                                        </p>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
             </div>
         </section>
     );
