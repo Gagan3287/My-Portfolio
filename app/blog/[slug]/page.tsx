@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { posts, getPost } from '@/lib/posts';
@@ -27,6 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const post = getPost(slug);
     if (!post) return {};
 
+    const firstImage = post.sections.flatMap((s) => s.images ?? [])[0];
+
     return {
         title: { absolute: post.title },
         description: post.description,
@@ -39,6 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             publishedTime: post.date,
             authors: [PERSON_NAME],
             tags: post.tags,
+            ...(firstImage ? { images: [{ url: firstImage.src, alt: firstImage.alt }] } : {}),
         },
     };
 }
@@ -92,15 +96,65 @@ export default async function BlogPostPage({ params }: Props) {
             {post.sections.map((s, i) => (
                 <section key={i} className="mt-10">
                     {s.heading && <h2 className="text-3xl font-semibold">{s.heading}</h2>}
+
                     {s.paragraphs?.map((t, j) => (
                         <p key={j} className="mt-4 text-lg leading-relaxed">
                             {t}
                         </p>
                     ))}
+
                     {s.bullets && (
                         <ul className="mt-4 list-disc space-y-3 pl-6 text-lg text-muted-foreground">
                             {s.bullets.map((b) => (
                                 <li key={b}>{b}</li>
+                            ))}
+                        </ul>
+                    )}
+
+                    {s.images && (
+                        <div className="mt-6 space-y-8">
+                            {s.images.map((img) => (
+                                <figure
+                                    key={img.src}
+                                    className={img.portrait ? 'mx-auto max-w-sm' : ''}
+                                >
+                                    <Image
+                                        src={img.src}
+                                        alt={img.alt}
+                                        width={0}
+                                        height={0}
+                                        sizes="(max-width: 768px) 100vw, 768px"
+                                        className="h-auto w-full rounded-xl"
+                                    />
+                                    {img.caption && (
+                                        <figcaption className="mt-2 text-sm text-muted-foreground">
+                                            {img.caption}
+                                        </figcaption>
+                                    )}
+                                </figure>
+                            ))}
+                        </div>
+                    )}
+
+                    {s.links && (
+                        <ul className="mt-4 space-y-2 text-lg">
+                            {s.links.map((l) => (
+                                <li key={l.href}>
+                                    {l.external ? (
+                                        <a
+                                            href={l.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="underline"
+                                        >
+                                            {l.label}
+                                        </a>
+                                    ) : (
+                                        <Link href={l.href} className="underline">
+                                            {l.label}
+                                        </Link>
+                                    )}
+                                </li>
                             ))}
                         </ul>
                     )}
