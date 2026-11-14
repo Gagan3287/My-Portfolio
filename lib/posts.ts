@@ -1,7 +1,22 @@
+export type PostImage = {
+    src: string;
+    alt: string;
+    caption?: string;
+    portrait?: boolean;
+};
+
+export type PostLink = {
+    label: string;
+    href: string;
+    external?: boolean;
+};
+
 export type PostSection = {
     heading?: string;
     paragraphs?: string[];
     bullets?: string[];
+    images?: PostImage[];
+    links?: PostLink[];
 };
 
 export type Post = {
@@ -15,6 +30,69 @@ export type Post = {
 };
 
 export const posts: Post[] = [
+    {
+        slug: 'ayulink-first-prize-pragathi-2-0-sr-university',
+        title: 'AyuLink: How Our Team Won 1st Prize in the Health Domain at Pragathi 2.0',
+        description:
+            'Vengala Gagan Chandra Tej, team lead of AyuLink, shares how the team won 1st Prize in the Health domain at Pragathi 2.0, SR University, Warangal, with photos from the event.',
+        date: '2026-11-13',
+        tags: ['AyuLink', 'Pragathi 2.0', 'SR University', 'Healthcare'],
+        related: ['ayulink'],
+        sections: [
+            {
+                paragraphs: [
+                    'AyuLink is a low-cost patient monitoring system we built for places where internet and network signal are not reliable. It is designed to keep track of a patient\'s health, remind them about their medicines, and alert a caregiver, even with no internet.',
+                    'I led a team of five, called Fight Club, and we presented AyuLink at Pragathi 2.0, the project expo at SR University, Warangal, in October 2026.',
+                ],
+                images: [
+                    {
+                        src: '/blog/ayulink/team-at-stall.jpeg',
+                        alt: 'The AyuLink team standing at their stall at the Pragathi 2.0 project expo, SR University',
+                        caption: 'The AyuLink team at our stall at Pragathi 2.0.',
+                    },
+                ],
+            },
+            {
+                heading: 'Winning 1st Prize',
+                paragraphs: [
+                    'We showed a complete working model live to the judges and faculty, and AyuLink won 1st Prize in the Health domain.',
+                ],
+                images: [
+                    {
+                        src: '/blog/ayulink/award-certificate-trophy.png',
+                        alt: '1st Prize certificate of achievement and trophy from Pragathi 2.0, SR University',
+                        caption: 'The 1st Prize certificate and trophy.',
+                        portrait: true,
+                    },
+                    {
+                        src: '/blog/ayulink/prize-distribution.jpeg',
+                        alt: 'Prize distribution at Pragathi 2.0 with the AyuLink team receiving the trophy and certificates',
+                        caption: 'Receiving the prize at the Pragathi 2.0 prize distribution.',
+                    },
+                ],
+            },
+            {
+                heading: 'Thank you',
+                paragraphs: [
+                    'Thank you to my four teammates, and to the faculty and organisers of Pragathi 2.0 at SR University for the opportunity.',
+                ],
+            },
+            {
+                heading: 'Read more',
+                links: [
+                    {
+                        label: 'My LinkedIn post about the win',
+                        href: 'https://lnkd.in/p/dudy6uU4',
+                        external: true,
+                    },
+                    {
+                        label: 'AyuLink project page',
+                        href: '/projects/ayulink',
+                    },
+                ],
+            },
+        ],
+    },
     {
         slug: 'vengala-gagan-chandra-tej-full-stack-developer-warangal',
         title: 'Vengala Gagan Chandra Tej: Full Stack Developer from Warangal',
