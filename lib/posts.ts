@@ -30,7 +30,83 @@ export type Post = {
 };
 
 export const posts: Post[] = [
+    
     {
+        slug: 'sraap-sr-university-student-portal-guide',
+        title: 'SRAaP (SRAAP) Student Portal at SR University: An Unofficial Student Guide',
+        description:
+            'SRAAP (SRAaP) explained by an SR University student: what the student portal at sraap.in is used for and how to stay safe. Unofficial guide by Vengala Gagan Chandra Tej.',
+        date: '2026-11-17',
+        tags: ['SRAAP', 'SRAaP', 'SR University', 'Student Portal'],
+        related: ['sru-lost-found'],
+        sections: [
+            {
+                paragraphs: [
+                    'SRAaP, often typed as SRAAP, is the student portal used at SR University, Warangal. The official portal is at sraap.in. I am a B.Tech student at SR University, and this is an unofficial guide to what the portal is used for.',
+                    'This is a personal website. I do not run SRAaP, and this page is not affiliated with the university. It does not have a login and never asks for your username, password or OTP.',
+                ],
+            },
+            {
+                heading: 'What is SRAaP used for?',
+                paragraphs: [
+                    'The official portal has separate login pages for students, staff and parents. SR University also publishes academic calendars and a page on minors and honours that mention SRAaP in several places. From those published documents, it is used for things like:',
+                ],
+                bullets: [
+                    'Course registration for each semester',
+                    'Semester fee payment and exam-related steps such as downloading hall tickets',
+                    'Declaring a minor, which B.Tech students do before the beginning of their third year',
+                    'Entering marks, which is done by faculty',
+                ],
+            },
+            {
+                heading: 'Staying safe while using SRAaP',
+                bullets: [
+                    'Open SRAaP only from sraap.in, the official SR University website, or links sent by the university.',
+                    'Before you log in, check that the address bar shows sraap.in.',
+                    'Never share your password or OTP with anyone, including other students.',
+                    'Do not enter your SRAaP details on any other website, including this one.',
+                    'For login or fee problems, use the contact page on the official portal or contact your department or the university office directly.',
+                ],
+            },
+            {
+                heading: 'Official links',
+                links: [
+                    {
+                        label: 'SRAaP official portal (sraap.in)',
+                        href: 'https://sraap.in/',
+                        external: true,
+                    },
+                    {
+                        label: 'SRAaP contact page',
+                        href: 'https://sraap.in/contact_us.php',
+                        external: true,
+                    },
+                    {
+                        label: 'SR University official website',
+                        href: 'https://sru.edu.in',
+                        external: true,
+                    },
+                    {
+                        label: 'SR University student developer portfolios',
+                        href: '/sr-university',
+                    },
+                ],
+            },
+            {
+                heading: 'About the author',
+                paragraphs: [
+                    'I am Vengala Gagan Chandra Tej, a B.Tech CSE (AI & ML) student at SR University, Warangal, and a Full Stack developer. I built SRU Lost & Found, a platform for SR University students. You can read more about me on the About page.',
+                ],
+                links: [
+                    {
+                        label: 'About Vengala Gagan Chandra Tej',
+                        href: '/about',
+                    },
+                ],
+            },
+        ],
+    },
+     {
         slug: 'ayulink-first-prize-pragathi-2-0-sr-university',
         title: 'AyuLink: How Our Team Won 1st Prize in the Health Domain at Pragathi 2.0',
         description:
