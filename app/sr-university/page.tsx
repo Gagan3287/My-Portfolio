@@ -37,6 +37,13 @@ export default function SRUniversityPage() {
                 Telangana. Are you an SR University student with a portfolio? Get in touch and I
                 will add it to this list.
             </p>
+            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+                New to the university portal? Read the{' '}
+                <Link href="/blog/sraap-sr-university-student-portal-guide" className="underline">
+                    unofficial SRAaP student guide
+                </Link>
+                .
+            </p>
 
             <h2 className="mt-12 text-3xl font-semibold">
                 Featured student: Vengala Gagan Chandra Tej
